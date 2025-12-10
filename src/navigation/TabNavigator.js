@@ -32,8 +32,13 @@ const TabNavigator = () => {
 
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
+        tabBarActiveTintColor: '#fff',
+        tabBarInactiveTintColor: '#000',
+        tabBarStyle: styles.tabBar,
+        tabBarItemStyle: {
+          justifyContent: 'center', // Centrado vertical
+          alignItems: 'center',     // Centrado horizontal
+        },
         headerShown: false, // Ocultamos el header del Tab para usar el del Stack o el propio de la pantalla
       })}
     >
@@ -60,5 +65,19 @@ const TabNavigator = () => {
     </Tab.Navigator>
   );
 };
+
+const styles = StyleSheet.create({
+  tabBar: {
+    height: 70, // Altura total de la barra
+    
+    // Ajustamos el padding para dar aire abajo pero mantener el centro
+    paddingBottom: 5, // Empuja todo un poco hacia arriba (protege del borde)
+    paddingTop: 5,    // Equilibra el espacio arriba para que el icono quede en medio
+    
+    backgroundColor: '#F49404',
+    borderTopWidth: 1,
+    borderTopColor: '#F49404',
+  }
+});
 
 export default TabNavigator;
