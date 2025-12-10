@@ -13,6 +13,7 @@ import RepertoriosCantante from '../screens/Cantante/RepertoriosCantante.js';
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
+  
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
